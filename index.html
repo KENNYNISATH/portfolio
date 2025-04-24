@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yalangi Kenny Nisanth - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      background: #121212;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+    header {
+      padding: 30px;
+      text-align: center;
+      background: #1f1f1f;
+      animation: fadeIn 2s ease-in;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #00ffe7;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #cccccc;
+    }
+    nav {
+      background: #272727;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+    }
+    nav button {
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav button:hover {
+      background: #00ffe7;
+      color: #000;
+    }
+    section {
+      display: none;
+      padding: 30px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    section.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Yalangi Kenny Nisanth</h1>
+    <p>Electronics and Communication Engineering, NIT Andhra Pradesh</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('About')">About</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('education')">Education</button>
+    <button onclick="showSection('experience')">Experience</button>
+    <button onclick="showSection('certificates')">Certificates</button>
+    <button onclick="showSection('projects')">Projects</button>
+  </nav>
+
+  <section id="about" class="active">
+    <h2>About</h2>
+    <p>Passionate ECE student with interest in embedded systems, VLSI, and software development. Experienced with various technical projects and internships.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Circuit Design & Analysis</li>
+      <li>Embedded Systems</li>
+      <li>Python, Verilog, MATLAB, Assembly (8051), C</li>
+      <li>Tools: Xilinx Vivado, Keil, Simulink, Proteus, Arduino IDE</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>NIT Andhra Pradesh</strong><br>Electronics and Communication Engineering<br>Nov 2022 - April 2026</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li>Intern - Oasis Infobyte (03/2024 – 04/2024)</li>
+      <li>Executive Member - E-Yantra, NIT Andhra Pradesh (09/2023 – 04/2024)</li>
+      <li>Intern - FPGA Speaks (09/2023 – 05/2024)</li>
+      <li>SPARC Internship - IIT Hyderabad (12/2024 – 12/2024)</li>
+    </ul>
+  </section>
+
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <ul>
+      <li>NVIDIA DLI - Fundamentals of Deep Learning</li>
+      <li>NIELIT Calicut - VLSI for Beginners</li>
+      <li>Oasis Infobyte - Python Programming</li>
+      <li>SPARC - Semiconductor Technology</li>
+      <li>TiHAN IIT Hyderabad - UAVs for Communication</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>RTL Coding on FPGA</li>
+      <li>Combat Game Development</li>
+      <li>ML Loan Approval Prediction</li>
+      <li>Object Detection using OpenCV</li>
+      <li>Bluetooth RC Car (Arduino)</li>
+      <li>ESP8266 Obstacle Avoidance Car</li>
+      <li>Face Recognition using SVM</li>
+      <li>Footstep Power Generation</li>
+      <li>Arduino Ambient Light Control</li>
+      <li>Autonomous Cleaning Robot</li>
+      <li>ML-Based Fault Detection on Raspberry Pi</li>
+    </ul>
+  </section>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
